@@ -5,10 +5,13 @@ $username = "root";
 $password = "";
 $dbname = "foodstore";
 
-$con = mysqli($host,$username,$password, $dbname);
+//this is a procedural
+//create connection
+$con = mysqli_connect($host,$username,$password, $dbname);
 
-if($con->connect_error){
-  die "Connection error" . $con->connect_error);
+//check connection
+if(!$con){
+  die "Connection error" . mysqli_connect_error());
 }
 else{
   echo "Connected to database successfully";
