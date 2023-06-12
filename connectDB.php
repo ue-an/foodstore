@@ -5,7 +5,7 @@ $username = "root";
 $password = "";
 $dbname = "foodstore";
 
-$con = msqli($host,$username,$password, $dbname);
+$con = mysqli($host,$username,$password, $dbname);
 
 if($con->connect_error){
   die "Connection error" . $con->connect_error);
